@@ -1,0 +1,29 @@
+.navContainer {
+    background-color: rgb(14, 143, 143);
+    height: 10vh;
+    width: 100vw;
+    color: white;
+    display: flex;
+}
+.webName {
+    width: 60vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    margin-left: 20px;
+}
+.webName:hover {
+    text-decoration: underline;
+}
+.cartDiv {
+    display: flex;
+    align-items: center;
+    /* width: 40vw;
+    height: 10vh; */
+    margin-right: 30px;
+
+}
+#cartIcon {
+    margin-left: 25vw;
+}

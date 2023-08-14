@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+}
+.itemDiv{
+    border: 2px solid rgb(238, 230, 230);
+    box-shadow: rgb(204, 145, 145) 2px 2px 2px 2px;
+    border-radius: 10px;
+}
+.imageStyle {
+    width: 300px;
+    height: 400px;
+}
+.titleStyle{
+    text-align: center;
+    padding: 5px;
+}
+.priceStyle{
+    text-align: center;
+    padding: 5px;
+    font-size: 1.4rem;
+    
+    /* border: 1px solid blue; */
+}
+.plusMinusDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons{
+    background-color: rgb(235, 192, 117);
+    border: 3px solid rgb(101, 153, 243);
+    border-radius: 50%;
+    font-size: 2rem;
+    box-shadow: rgb(240, 98, 85) 1px 1px 2px 2px;
+    margin: 5px;
+}
+.buttons:hover{
+    background-color: rgba(94, 224, 97, 0.848);
+}
+#noOfItems{
+    font-size: 1.5rem;
+    margin: 5px;
+}
