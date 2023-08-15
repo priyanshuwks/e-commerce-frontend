@@ -3,3 +3,9 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
 }
+#loading {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 4rem;
+}
