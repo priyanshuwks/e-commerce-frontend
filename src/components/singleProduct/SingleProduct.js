@@ -10,7 +10,8 @@ function SingleProduct({ product }) {
   // const dispatch = useDispatch();
   // const cart = useSelector(state => state.cartReducer.cart);
   // const currItem = cart.find(item => product.id === cart.id);
-  // const currQuantity = currItem ? currItem.quantity : 0;
+  let currQuantity = 1;
+  // currQuantity = currItem ? currItem.quantity : 0;
 
   return (
     <div className="itemDiv">
@@ -19,7 +20,7 @@ function SingleProduct({ product }) {
       <h4 className="priceStyle"><BsCurrencyRupee/>{ product.price * 80}</h4>
       <div className="plusMinusDiv">
         <button className="minusButton buttons" ><AiOutlineMinus/></button>
-        <h4 id="noOfItems">0</h4>
+        <h4 id="noOfItems">{currQuantity}</h4>
         <button className="plusButton buttons" ><AiOutlinePlus/></button>
       </div>
     </div>
