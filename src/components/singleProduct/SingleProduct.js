@@ -4,14 +4,15 @@ import './SingleProduct.css'
 import {AiOutlineMinus} from 'react-icons/ai'
 import {AiOutlinePlus} from 'react-icons/ai'
 import { useDispatch, useSelector } from "react-redux";
-// import { removeFromCart } from "../../redux/slices/CartSlice";
+import { addToCart, removeFromCart } from "../../redux/slices/CartSlice";
 
 function SingleProduct({ product }) {
-  // const dispatch = useDispatch();
-  // const cart = useSelector(state => state.cartReducer.cart);
-  // const currItem = cart.find(item => product.id === cart.id);
-  let currQuantity = 1;
-  // currQuantity = currItem ? currItem.quantity : 0;
+  const dispatch = useDispatch();
+  // console.log("reached dispatch")
+  const cart = useSelector(state => state.cartReducer.cart);
+  const currItem = cart.find(item => product.id === item.id);
+  let currQuantity = 0;
+  currQuantity = currItem ? currItem.quantity : 0;
 
   return (
     <div className="itemDiv">
@@ -19,9 +20,9 @@ function SingleProduct({ product }) {
       <h3 className="titleStyle">{product.title}</h3>
       <h4 className="priceStyle"><BsCurrencyRupee/>{ product.price * 80}</h4>
       <div className="plusMinusDiv">
-        <button className="minusButton buttons" ><AiOutlineMinus/></button>
+        <button className="minusButton buttons" onClick={() => dispatch(removeFromCart(product.id))}><AiOutlineMinus/></button>
         <h4 id="noOfItems">{currQuantity}</h4>
-        <button className="plusButton buttons" ><AiOutlinePlus/></button>
+        <button className="plusButton buttons" onClick={() => dispatch(addToCart(product.id))}><AiOutlinePlus/></button>
       </div>
     </div>
   );
